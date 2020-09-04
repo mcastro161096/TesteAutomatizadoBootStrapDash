@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +19,9 @@ namespace TesteAutomatizadoBootStrapDash.Utils
 
         }
 
-        public void EsperaElementoVisivel(IWebElement elemento)
+        public void EsperaElementoSerClicavel(IWebElement elemento)
         {
-            //Espera.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector(elemento.Text)));
-            Espera.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.PresenceOfAllElementsLocatedBy((By)elemento));
-
+            Espera.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(elemento));
 
         }
 

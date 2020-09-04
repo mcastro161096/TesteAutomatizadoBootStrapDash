@@ -22,8 +22,8 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
 
         public BasicFormElementsPgo(IWebDriver driver)
         {
-            CampoEmail = driver.FindElement(By.CssSelector("#input1"));
-            CampoPassword = driver.FindElement(By.CssSelector("#input2"));
+            CampoEmail = driver.FindElement(By.Id("input1"));
+            CampoPassword = driver.FindElement(By.Id("input2"));
         }
 
         

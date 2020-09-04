@@ -16,11 +16,11 @@ namespace TesteAutomatizadoBootStrapDash
             BasicFormElementsPgo pageObject = new BasicFormElementsPgo(driver);
 
                 Esperas espera = new Esperas(driver);
-                        espera.EsperaElementoVisivel(pageObject.CampoEmail);
+                        espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
             Assert.AreEqual(pageObject.CampoEmail.Enabled, true);
 
-            Assert.AreEqual(pageObject.CampoPassword.Enabled, false);
+            Assert.AreEqual(pageObject.CampoPassword.Enabled, true);
 
 
         }
