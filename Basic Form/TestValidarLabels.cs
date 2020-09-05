@@ -17,15 +17,24 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Form
             Esperas espera = new Esperas(driver);
             espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
-            Assert.AreEqual("Default Form", pageObject.TituloCard.Text);
+                Assert.AreEqual("Basic Form", pageObject.TituloCard.Text);
 
-            Assert.AreEqual("Basic form layout", pageObject.DescricaoCard.Text);
+                Assert.AreEqual("Basic form elements", pageObject.DescricaoCard.Text);
+
+                Assert.AreEqual("Name", pageObject.LabelName.Text);
+
+                Assert.AreEqual("Email address", pageObject.LabelEmail.Text);
+
+                Assert.AreEqual("Password", pageObject.LabelPassword.Text);
+
+                Assert.AreEqual("Upload file", pageObject.LabelUpload.Text);
+
+                Assert.AreEqual("City", pageObject.LabelCity.Text);
+
+                Assert.AreEqual("Message", pageObject.LabelMessage.Text);
 
 
 
-            Assert.AreEqual("Email", pageObject.LabelEmail.Text);
-
-            Assert.AreEqual("Password", pageObject.LabelPassword.Text);
         }
     }
 }

@@ -66,7 +66,7 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
             
             LabelUpload = driver.FindElement(By.CssSelector("[for=input8]"));
             
-            CampoUpload = driver.FindElement(By.Id("input8"));
+            CampoUpload = driver.FindElement(By.Id("inpu8"));
             
             LabelCity = driver.FindElement(By.CssSelector("[for=input9]"));
             
