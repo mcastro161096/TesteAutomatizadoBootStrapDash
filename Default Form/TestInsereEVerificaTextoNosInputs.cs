@@ -22,14 +22,16 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
             Esperas espera = new Esperas(driver);
              espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
-                pageObject.CampoEmail.SendKeys("meuemail@gmail.com");
-                pageObject.CampoPassword.SendKeys("123");
+            DadosParaInputs dados = new DadosParaInputs();
+
+                pageObject.CampoEmail.SendKeys(dados.Email);
+                pageObject.CampoPassword.SendKeys(dados.Password);
 
                     var valorAtualEmail = BuscaValorDoElemento(driver, pageObject.CampoEmail);
                     var valorAtualPassword = BuscaValorDoElemento(driver, pageObject.CampoPassword);
 
-                        Assert.AreEqual("meuemail@gmail.com", valorAtualEmail);
-                        Assert.AreEqual("123", valorAtualPassword);
+                        Assert.AreEqual(dados.Email, valorAtualEmail);
+                        Assert.AreEqual(dados.Password, valorAtualPassword);
 
             
 

@@ -3,7 +3,7 @@ using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 using Assert = NUnit.Framework.Assert;
 
-namespace TesteAutomatizadoBootStrapDash
+namespace TesteAutomatizadoBootStrapDash.Default_Form
 {
     [TestFixture]
     public class TestVerificarCamposHabilitados : BaseTest

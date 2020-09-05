@@ -15,7 +15,7 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
             DefaultFormElementsPgo pageObject = new DefaultFormElementsPgo(driver);
 
                 Esperas espera = new Esperas(driver);
-                espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
+                    espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
                     Assert.AreEqual("Default Form", pageObject.TituloCard.Text);
 
