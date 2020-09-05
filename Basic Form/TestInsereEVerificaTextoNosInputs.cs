@@ -17,7 +17,7 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Form
             BasicFormElementsPgo pageObject = new BasicFormElementsPgo(driver);
 
                 Esperas espera = new Esperas(driver);
-                espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
+                    espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
                  DadosParaInputs dados = new DadosParaInputs();
 
