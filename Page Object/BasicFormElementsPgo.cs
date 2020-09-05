@@ -1,8 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,49 +7,78 @@ using System.Threading.Tasks;
 
 namespace TesteAutomatizadoBootStrapDash.Page_Object
 {
-    public class BasicFormElementsPgo
+    class BasicFormElementsPgo
     {
-
-
-        #region Default Form
-        public IWebElement CampoEmail { get; set; }
-
-        public IWebElement CampoPassword { get; set; }
-
-        public IWebElement BotaoSubmit { get; set; }
-
-        public IWebElement BotaoCancel { get; set; }
+        #region Basic Form
 
         public IWebElement TituloCard { get; set; }
 
         public IWebElement DescricaoCard { get; set; }
 
+        public IWebElement LabelName { get; set; }
+
+        public IWebElement CampoName { get; set; }
+
         public IWebElement LabelEmail { get; set; }
 
+        public IWebElement CampoEmail { get; set; }
+
         public IWebElement LabelPassword { get; set; }
+
+        public IWebElement CampoPassword { get; set; }
+
+        public IWebElement LabelUpload { get; set; }
+
+        public IWebElement CampoUpload { get; set; }
+
+        public IWebElement LabelCity { get; set; }
+
+        public IWebElement CampoCity { get; set; }
+
+        public IWebElement LabelMessage { get; set; }
+
+        public IWebElement CampoMessage { get; set; }
+
+        public IWebElement BotaoSubmit { get; set; }
+
+        public IWebElement BotaoCancel { get; set; }
 
         #endregion
 
         public BasicFormElementsPgo(IWebDriver driver)
         {
-            CampoEmail = driver.FindElement(By.Id("input1")); 
 
-            CampoPassword = driver.FindElement(By.Id("input2"));
-
-            BotaoSubmit = driver.FindElement(By.CssSelector(" div:nth-child(1)> form> form > .btn-success"));
-
-            BotaoCancel = driver.FindElement(By.CssSelector(" div:nth-child(1)> form> form > .btn-light"));
-
-            TituloCard = driver.FindElement(By.CssSelector(" div.col-md-6.d-flex.align-items-stretch.grid-margin > div > div:nth-child(1) > div > div> h4"));
-
-            DescricaoCard = driver.FindElement(By.CssSelector(" div.col-md-6.d-flex.align-items-stretch.grid-margin > div > div:nth-child(1) > div > div> p"));
-
-            LabelEmail = driver.FindElement(By.CssSelector("[for='input1']"));
-
-            LabelPassword = driver.FindElement(By.CssSelector("[for='input2']"));
+            TituloCard = driver.FindElement(By.CssSelector(" div.col-md-6.grid-margin.stretch-card > div > div > h4")); 
+            
+            DescricaoCard = driver.FindElement(By.CssSelector(" div.col-md-6.grid-margin.stretch-card > div > div > p"));
+            
+            LabelName = driver.FindElement(By.CssSelector("[for=input5]"));
+            
+            CampoName = driver.FindElement(By.Id("input5"));
+            
+            LabelEmail = driver.FindElement(By.CssSelector("[for=input6]"));
+            
+            CampoEmail = driver.FindElement(By.Id("input6"));
+            
+            LabelPassword = driver.FindElement(By.CssSelector("[for=input7]"));
+            
+            CampoPassword = driver.FindElement(By.Id("input7"));
+            
+            LabelUpload = driver.FindElement(By.CssSelector("[for=input8]"));
+            
+            CampoUpload = driver.FindElement(By.Id("input8"));
+            
+            LabelCity = driver.FindElement(By.CssSelector("[for=input9]"));
+            
+            CampoCity = driver.FindElement(By.Id("input9"));
+            
+            LabelMessage = driver.FindElement(By.CssSelector("[for=input10]"));
+            
+            CampoMessage = driver.FindElement(By.Id("input10"));
+            
+            BotaoSubmit = driver.FindElement(By.CssSelector(" div.col-md-6.grid-margin.stretch-card > div > div > form > button.btn.mr-2.btn-success"));
+            
+            BotaoCancel = driver.FindElement(By.CssSelector(" div.col-md-6.grid-margin.stretch-card > div > div > form > button.btn-light"));
         }
-
-        
-
     }
 }

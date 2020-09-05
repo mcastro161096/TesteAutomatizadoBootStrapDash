@@ -17,7 +17,7 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
         public void InsereEVerificaTextoNosInputs()
         {
             AbreUrl("https://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/basicFormElements/");
-            BasicFormElementsPgo pageObject = new BasicFormElementsPgo(driver);
+            DefaultFormElementsPgo pageObject = new DefaultFormElementsPgo(driver);
 
             Esperas espera = new Esperas(driver);
              espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
