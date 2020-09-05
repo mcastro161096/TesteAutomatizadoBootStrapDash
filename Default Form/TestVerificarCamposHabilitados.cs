@@ -20,11 +20,11 @@ namespace TesteAutomatizadoBootStrapDash
 
                     Assert.AreEqual(true, pageObject.CampoEmail.Enabled);
 
-                        Assert.AreEqual(true, pageObject.CampoPassword.Enabled);
+                    Assert.AreEqual(true, pageObject.CampoPassword.Enabled);
 
-                            Assert.AreEqual(true, pageObject.BotaoSubmit.Enabled);
+                    Assert.AreEqual(true, pageObject.BotaoSubmit.Enabled);
 
-                                Assert.AreEqual(true, pageObject.BotaoCancel.Enabled);
+                    Assert.AreEqual(true, pageObject.BotaoCancel.Enabled);
 
 
 

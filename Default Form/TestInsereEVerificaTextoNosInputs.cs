@@ -28,8 +28,8 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
                     var valorAtualEmail = BuscaValorDoElemento(driver, pageObject.CampoEmail);
                     var valorAtualPassword = BuscaValorDoElemento(driver, pageObject.CampoPassword);
 
-            Assert.AreEqual("meuemail@gmail.com", valorAtualEmail);
-            Assert.AreEqual("123", valorAtualPassword);
+                        Assert.AreEqual("meuemail@gmail.com", valorAtualEmail);
+                        Assert.AreEqual("123", valorAtualPassword);
 
             
 
