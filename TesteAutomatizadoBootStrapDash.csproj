@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
-    <Compile Include="Default Form\TestInsereTextoNosInputs.cs" />
+    <Compile Include="Default Form\TestInsereEVerificaTextoNosInputs.cs" />
     <Compile Include="Default Form\TestVerificarCamposHabilitados.cs" />
     <Compile Include="Page Object\BasicFormElementsPgo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

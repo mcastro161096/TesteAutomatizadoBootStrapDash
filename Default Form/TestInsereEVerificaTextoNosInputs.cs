@@ -11,7 +11,7 @@ using TesteAutomatizadoBootStrapDash.Utils;
 namespace TesteAutomatizadoBootStrapDash.Default_Form
 {
     [TestFixture]
-    public class TestInsereTextoNosInputs : BaseTest
+    public class TestInsereEVerificaTextoNosInputs : BaseTest
     {
         [Test]
         public void InsereEVerificaTextoNosInputs()
