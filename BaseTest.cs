@@ -35,5 +35,16 @@ namespace TesteAutomatizadoBootStrapDash
             driver.Navigate().GoToUrl(link);
 
         }
+
+        public object BuscaValorDoElemento(IWebDriver driver, IWebElement elemento)
+        {
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
+            var id = elemento.GetAttribute("id").ToString();
+
+            var valorDoElemento = executor.ExecuteScript($"return (document.getElementById('{id}').value)").ToString();
+
+
+            return valorDoElemento;
+        }
     }
 }

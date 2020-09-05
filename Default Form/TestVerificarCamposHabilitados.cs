@@ -18,9 +18,9 @@ namespace TesteAutomatizadoBootStrapDash
                 Esperas espera = new Esperas(driver);
                         espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
-            Assert.AreEqual(pageObject.CampoEmail.Enabled, true);
+            Assert.AreEqual(true, pageObject.CampoEmail.Enabled);
 
-            Assert.AreEqual(pageObject.CampoPassword.Enabled, true);
+            Assert.AreEqual(true, pageObject.CampoPassword.Enabled);
 
 
         }
