@@ -39,19 +39,20 @@ namespace TesteAutomatizadoBootStrapDash
         public object BuscaValorDoElementoParaInputs(IWebDriver driver, IWebElement elemento)
         {
             IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
-            var id = elemento.GetAttribute("id").ToString();
+                var id = elemento.GetAttribute("id").ToString();
 
-            var valorDoElemento = executor.ExecuteScript($"return (document.getElementById('{id}').value)").ToString();
-
+                    var valorDoElemento = executor.ExecuteScript($"return (document.getElementById('{id}').value)").ToString();
 
             return valorDoElemento;
         }
 
         public object BuscaValorDoElementoParaDropDowns(IWebDriver driver, IWebElement elemento)
         {
-           var value = BuscaValorDoElementoParaInputs(driver, elemento).ToString();
+            var id = elemento.GetAttribute("id").ToString();
 
-               var valorDoElemento = driver.FindElement(By.CssSelector($"option[value='{value}']"));
+                var value = BuscaValorDoElementoParaInputs(driver, elemento).ToString();
+
+                     var valorDoElemento = driver.FindElement(By.CssSelector($"#{id} > option[value='{value}']"));
 
 
             return valorDoElemento.Text.ToString();

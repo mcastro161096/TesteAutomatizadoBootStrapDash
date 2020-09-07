@@ -76,11 +76,14 @@
     <Compile Include="Default Form\TestInsereEVerificaTextoNosInputs.cs" />
     <Compile Include="Default Form\TestVerificarCamposHabilitados.cs" />
     <Compile Include="Default Form\TestValidarLabels.cs" />
+    <Compile Include="Horizontal Two Column\TestInsereEVerificaTextoNosInputs.cs" />
+    <Compile Include="Horizontal Two Column\TestVerificarCamposHabilitados.cs" />
     <Compile Include="Input Size\TestInsereEVerificaTextoNosInputs.cs" />
     <Compile Include="Input Size\TestVerificarCamposHabilitados.cs" />
     <Compile Include="Page Object\BasicFormElementsPgo.cs" />
     <Compile Include="Page Object\BasicInputGroupsElementsPgo.cs" />
     <Compile Include="Page Object\DefaultFormElementsPgo.cs" />
+    <Compile Include="Page Object\HorizontalTwoColumnElementsPgo.cs" />
     <Compile Include="Page Object\InputSizeElementsPgo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DadosParaInputs.cs" />

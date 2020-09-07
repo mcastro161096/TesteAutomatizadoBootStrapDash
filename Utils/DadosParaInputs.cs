@@ -30,7 +30,7 @@ namespace TesteAutomatizadoBootStrapDash.Utils
 
         public string Pincode { get; set; } = "90000000";
 
-        public DateTime DateOfBirth { get; set; } = DateTime.Now.Date;
+        public DateTime DateOfBirth { get; set; } = DateTime.Today;
 
         public int Valor { get; set; } = 5;
     }
