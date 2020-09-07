@@ -35,17 +35,17 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Form
                     pageObject.CampoMessage.SendKeys(dados.Message);
 
 
-            Assert.AreEqual(dados.Name, BuscaValorDoElemento(driver, pageObject.CampoName));
+            Assert.AreEqual(dados.Name, BuscaValorDoElementoParaInputs(driver, pageObject.CampoName));
 
-            Assert.AreEqual(dados.Email, BuscaValorDoElemento(driver, pageObject.CampoEmail));
+            Assert.AreEqual(dados.Email, BuscaValorDoElementoParaInputs(driver, pageObject.CampoEmail));
 
-            Assert.AreEqual(dados.Password, BuscaValorDoElemento(driver, pageObject.CampoPassword));
+            Assert.AreEqual(dados.Password, BuscaValorDoElementoParaInputs(driver, pageObject.CampoPassword));
 
-            Assert.AreEqual("C:\\fakepath\\Arquivo.docx", BuscaValorDoElemento(driver, pageObject.CampoUpload));
+            Assert.AreEqual("C:\\fakepath\\Arquivo.docx", BuscaValorDoElementoParaInputs(driver, pageObject.CampoUpload));
 
-            Assert.AreEqual(dados.City, BuscaValorDoElemento(driver, pageObject.CampoCity));
+            Assert.AreEqual(dados.City, BuscaValorDoElementoParaInputs(driver, pageObject.CampoCity));
 
-            Assert.AreEqual(dados.Message, BuscaValorDoElemento(driver, pageObject.CampoMessage));
+            Assert.AreEqual(dados.Message, BuscaValorDoElementoParaInputs(driver, pageObject.CampoMessage));
 
 
 

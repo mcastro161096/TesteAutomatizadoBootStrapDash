@@ -26,11 +26,11 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Input_Groups
                     pageObject.Campo3.SendKeys(dados.Valor.ToString());
 
 
-            Assert.AreEqual(dados.UserName, BuscaValorDoElemento(driver, pageObject.Campo1));
+            Assert.AreEqual(dados.UserName, BuscaValorDoElementoParaInputs(driver, pageObject.Campo1));
 
-            Assert.AreEqual(dados.UserName, BuscaValorDoElemento(driver, pageObject.Campo2));
+            Assert.AreEqual(dados.UserName, BuscaValorDoElementoParaInputs(driver, pageObject.Campo2));
 
-            Assert.AreEqual(dados.Valor.ToString(), BuscaValorDoElemento(driver, pageObject.Campo3));
+            Assert.AreEqual(dados.Valor.ToString(), BuscaValorDoElementoParaInputs(driver, pageObject.Campo3));
 
             Assert.AreEqual("00.0", pageObject.Campo4.Text);
 

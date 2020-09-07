@@ -27,8 +27,8 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
                 pageObject.CampoEmail.SendKeys(dados.Email);
                 pageObject.CampoPassword.SendKeys(dados.Password);
 
-                    var valorAtualEmail = BuscaValorDoElemento(driver, pageObject.CampoEmail);
-                    var valorAtualPassword = BuscaValorDoElemento(driver, pageObject.CampoPassword);
+                    var valorAtualEmail = BuscaValorDoElementoParaInputs(driver, pageObject.CampoEmail);
+                    var valorAtualPassword = BuscaValorDoElementoParaInputs(driver, pageObject.CampoPassword);
 
                         Assert.AreEqual(dados.Email, valorAtualEmail);
                         Assert.AreEqual(dados.Password, valorAtualPassword);

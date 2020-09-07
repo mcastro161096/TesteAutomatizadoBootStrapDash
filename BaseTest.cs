@@ -36,7 +36,7 @@ namespace TesteAutomatizadoBootStrapDash
 
         }
 
-        public object BuscaValorDoElemento(IWebDriver driver, IWebElement elemento)
+        public object BuscaValorDoElementoParaInputs(IWebDriver driver, IWebElement elemento)
         {
             IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
             var id = elemento.GetAttribute("id").ToString();
@@ -46,5 +46,16 @@ namespace TesteAutomatizadoBootStrapDash
 
             return valorDoElemento;
         }
+
+        public object BuscaValorDoElementoParaDropDowns(IWebDriver driver, IWebElement elemento)
+        {
+           var value = BuscaValorDoElementoParaInputs(driver, elemento).ToString();
+
+               var valorDoElemento = driver.FindElement(By.CssSelector($"option[value='{value}']"));
+
+
+            return valorDoElemento.Text.ToString();
+        }
+
     }
 }

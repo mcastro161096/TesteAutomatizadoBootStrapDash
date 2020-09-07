@@ -34,19 +34,18 @@ namespace TesteAutomatizadoBootStrapDash.Input_Size
                         pageObject.CampoLargeInput.Click();
                             pageObject.OptionLargeInput.Click();
 
-            Assert.AreEqual(dados.Email, BuscaValorDoElemento(driver, pageObject.CampoLargeInput));
+            Assert.AreEqual(dados.Email, BuscaValorDoElementoParaInputs(driver, pageObject.CampoLargeInput));
 
-            Assert.AreEqual(dados.Email, BuscaValorDoElemento(driver, pageObject.CampoDefaultInput));
+            Assert.AreEqual(dados.Email, BuscaValorDoElementoParaInputs(driver, pageObject.CampoDefaultInput));
 
-            Assert.AreEqual(dados.Email, BuscaValorDoElemento(driver, pageObject.CampoSmallInput));
+            Assert.AreEqual(dados.Email, BuscaValorDoElementoParaInputs(driver, pageObject.CampoSmallInput));
 
-            Assert.AreEqual("This a first option", pageObject.ComboSmallInput.Text);
+            Assert.AreEqual("This is First option", BuscaValorDoElementoParaDropDowns(driver, pageObject.ComboSmallInput));
 
-            Assert.AreEqual("Selected Option", BuscaValorDoElemento(driver, pageObject.ComboDefaultInput));
+            Assert.AreEqual("Selected Option", BuscaValorDoElementoParaDropDowns(driver, pageObject.ComboDefaultInput));
 
-            Assert.AreEqual("This is an option with object value", BuscaValorDoElemento(driver, pageObject.ComboLargeInput));
+            Assert.AreEqual("This is an option with object value", BuscaValorDoElementoParaDropDowns(driver, pageObject.ComboLargeInput));
 
-            var select = document.getElementById('__BVID__152').option = select.options[select.selectedIndex];
 
 
         }
