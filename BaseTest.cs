@@ -1,11 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TesteAutomatizadoBootStrapDash
 {
@@ -39,9 +34,19 @@ namespace TesteAutomatizadoBootStrapDash
         public object BuscaValorDoElementoParaInputs(IWebDriver driver, IWebElement elemento)
         {
             IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
-                var id = elemento.GetAttribute("id").ToString();
+            var id = elemento.GetAttribute("id").ToString();
 
-                    var valorDoElemento = executor.ExecuteScript($"return (document.getElementById('{id}').value)").ToString();
+            var valorDoElemento = "";
+
+            if (id != null)
+            {
+                valorDoElemento = executor.ExecuteScript($"return (document.getElementById('{id}').value)").ToString();
+            }
+            else
+            {
+                valorDoElemento = executor.ExecuteScript($"return (document.getElementById('{id}').value)").ToString();
+
+            }
 
             return valorDoElemento;
         }
@@ -50,12 +55,22 @@ namespace TesteAutomatizadoBootStrapDash
         {
             var id = elemento.GetAttribute("id").ToString();
 
-                var value = BuscaValorDoElementoParaInputs(driver, elemento).ToString();
+            var value = BuscaValorDoElementoParaInputs(driver, elemento).ToString();
 
-                     var valorDoElemento = driver.FindElement(By.CssSelector($"#{id} > option[value='{value}']"));
+            var valorDoElemento = driver.FindElement(By.CssSelector($"#{id} > option[value='{value}']"));
 
 
             return valorDoElemento.Text.ToString();
+        }
+
+        public object BuscaValorDoElementoQuerySelector(IWebDriver driver, string seletor)
+        {
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
+
+            var valorDoElemento = executor.ExecuteScript($"return document.querySelector('{seletor}').value");
+
+
+            return valorDoElemento;
         }
 
     }

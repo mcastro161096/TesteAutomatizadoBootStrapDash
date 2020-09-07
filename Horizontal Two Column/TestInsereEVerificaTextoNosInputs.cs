@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -14,37 +13,37 @@ namespace TesteAutomatizadoBootStrapDash.Horizontal_Two_Column
             AbreUrl("https://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/basicFormElements/");
             HorizontalTwoColumnElementsPgo pageObject = new HorizontalTwoColumnElementsPgo(driver);
 
-                Esperas espera = new Esperas(driver);
-                    espera.EsperaElementoSerClicavel(pageObject.CampoFirstName);
+            Esperas espera = new Esperas(driver);
+            espera.EsperaElementoSerClicavel(pageObject.CampoFirstName);
 
-                     DadosParaInputs dados = new DadosParaInputs();
+            DadosParaInputs dados = new DadosParaInputs();
 
-                            pageObject.CampoFirstName.SendKeys(dados.Name);
+            pageObject.CampoFirstName.SendKeys(dados.Name);
 
-                            pageObject.CampoLastName.SendKeys(dados.UserName);
+            pageObject.CampoLastName.SendKeys(dados.UserName);
 
-                            pageObject.ComboGender.Click();
-                                pageObject.OptionGender.Click();
+            pageObject.ComboGender.Click();
+            pageObject.OptionGender.Click();
 
-                            pageObject.ComboCategory.Click();
-                                pageObject.OptionCategory.Click();
+            pageObject.ComboCategory.Click();
+            pageObject.OptionCategory.Click();
 
-                            pageObject.CampoAddress1.SendKeys(dados.Addrress1);
+            pageObject.CampoAddress1.SendKeys(dados.Addrress1);
 
-                            pageObject.CampoAddress2.SendKeys(dados.Address2);
+            pageObject.CampoAddress2.SendKeys(dados.Address2);
 
-                            pageObject.CampoCity.SendKeys(dados.City);
+            pageObject.CampoCity.SendKeys(dados.City);
 
-                            pageObject.CampoDateOfBirth.SendKeys(dados.DateOfBirth.ToString());
-                               
-                            pageObject.LabelMembership.Click();
+            pageObject.CampoDateOfBirth.SendKeys(dados.DateOfBirth.ToString());
 
-                            pageObject.CampoState.SendKeys(dados.State);
+            pageObject.LabelMembership.Click();
 
-                            pageObject.CampoPincode.SendKeys(dados.Pincode);
+            pageObject.CampoState.SendKeys(dados.State);
 
-                            pageObject.ComboCountry.Click();
-                                pageObject.OptionCountry.Click();
+            pageObject.CampoPincode.SendKeys(dados.Pincode);
+
+            pageObject.ComboCountry.Click();
+            pageObject.OptionCountry.Click();
 
 
             Assert.AreEqual(dados.Name, BuscaValorDoElementoParaInputs(driver, pageObject.CampoFirstName));
@@ -63,7 +62,7 @@ namespace TesteAutomatizadoBootStrapDash.Horizontal_Two_Column
 
             Assert.AreEqual(dados.DateOfBirth.ToString(), BuscaValorDoElementoParaInputs(driver, pageObject.CampoDateOfBirth));
 
-            Assert.AreEqual(true,  pageObject.RadioMembership.Selected);
+            Assert.AreEqual(true, pageObject.RadioMembership.Selected);
 
             Assert.AreEqual(dados.State, BuscaValorDoElementoParaInputs(driver, pageObject.CampoState));
 

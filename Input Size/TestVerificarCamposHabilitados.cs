@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -14,8 +13,8 @@ namespace TesteAutomatizadoBootStrapDash.Input_Size
             AbreUrl("https://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/basicFormElements/");
             InputSizeElementsPgo pageObject = new InputSizeElementsPgo(driver);
 
-                Esperas espera = new Esperas(driver);
-                 espera.EsperaElementoSerClicavel(pageObject.CampoSmallInput);
+            Esperas espera = new Esperas(driver);
+            espera.EsperaElementoSerClicavel(pageObject.CampoSmallInput);
 
             Assert.AreEqual(true, pageObject.CampoLargeInput.Enabled);
 

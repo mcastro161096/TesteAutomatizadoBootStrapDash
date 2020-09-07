@@ -1,10 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -20,20 +14,20 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
             DefaultFormElementsPgo pageObject = new DefaultFormElementsPgo(driver);
 
             Esperas espera = new Esperas(driver);
-             espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
+            espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
             DadosParaInputs dados = new DadosParaInputs();
 
-                pageObject.CampoEmail.SendKeys(dados.Email);
-                pageObject.CampoPassword.SendKeys(dados.Password);
+            pageObject.CampoEmail.SendKeys(dados.Email);
+            pageObject.CampoPassword.SendKeys(dados.Password);
 
-                    var valorAtualEmail = BuscaValorDoElementoParaInputs(driver, pageObject.CampoEmail);
-                    var valorAtualPassword = BuscaValorDoElementoParaInputs(driver, pageObject.CampoPassword);
+            var valorAtualEmail = BuscaValorDoElementoParaInputs(driver, pageObject.CampoEmail);
+            var valorAtualPassword = BuscaValorDoElementoParaInputs(driver, pageObject.CampoPassword);
 
-                        Assert.AreEqual(dados.Email, valorAtualEmail);
-                        Assert.AreEqual(dados.Password, valorAtualPassword);
+            Assert.AreEqual(dados.Email, valorAtualEmail);
+            Assert.AreEqual(dados.Password, valorAtualPassword);
 
-            
+
 
         }
 

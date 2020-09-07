@@ -1,13 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TesteAutomatizadoBootStrapDash.Page_Object
 {
@@ -34,11 +25,11 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
 
         #endregion
 
-       
+
 
         public DefaultFormElementsPgo(IWebDriver driver)
         {
-            CampoEmail = driver.FindElement(By.Id("input1")); 
+            CampoEmail = driver.FindElement(By.Id("input1"));
 
             CampoPassword = driver.FindElement(By.Id("input2"));
 
@@ -55,7 +46,7 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
             LabelPassword = driver.FindElement(By.CssSelector("[for='input2']"));
         }
 
-        
+
 
     }
 }

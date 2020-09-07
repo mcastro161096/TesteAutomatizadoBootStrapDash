@@ -73,6 +73,9 @@
     <Compile Include="Basic Form\TestVerificarCamposHabilitados.cs" />
     <Compile Include="Basic Input Groups\TestInsereEVerificaTextoNosInputs.cs" />
     <Compile Include="Basic Input Groups\TestVerificarCamposHabilitados.cs" />
+    <Compile Include="Date Picker Inline\TestSelecionar30Agosto2010.cs" />
+    <Compile Include="Date Picker Inline\TestSelecionar4Maio2022.cs" />
+    <Compile Include="Page Object\DatePickerInlineElementsPgo.cs" />
     <Compile Include="Default Form\TestInsereEVerificaTextoNosInputs.cs" />
     <Compile Include="Default Form\TestVerificarCamposHabilitados.cs" />
     <Compile Include="Default Form\TestValidarLabels.cs" />

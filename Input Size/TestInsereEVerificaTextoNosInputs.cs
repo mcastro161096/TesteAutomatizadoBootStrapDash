@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -15,24 +14,24 @@ namespace TesteAutomatizadoBootStrapDash.Input_Size
             InputSizeElementsPgo pageObject = new InputSizeElementsPgo(driver);
 
             Esperas espera = new Esperas(driver);
-                espera.EsperaElementoSerClicavel(pageObject.CampoSmallInput);
+            espera.EsperaElementoSerClicavel(pageObject.CampoSmallInput);
 
-                    DadosParaInputs dados = new DadosParaInputs();
+            DadosParaInputs dados = new DadosParaInputs();
 
-                        pageObject.CampoLargeInput.SendKeys(dados.Email);
+            pageObject.CampoLargeInput.SendKeys(dados.Email);
 
-                        pageObject.CampoDefaultInput.SendKeys(dados.Email);
+            pageObject.CampoDefaultInput.SendKeys(dados.Email);
 
-                        pageObject.CampoSmallInput.SendKeys(dados.Email);
+            pageObject.CampoSmallInput.SendKeys(dados.Email);
 
-                        pageObject.ComboSmallInput.Click();
-                            pageObject.OptionSmallInput.Click();
+            pageObject.ComboSmallInput.Click();
+            pageObject.OptionSmallInput.Click();
 
-                        pageObject.ComboDefaultInput.Click();
-                            pageObject.OptionDefaultInput.Click();
+            pageObject.ComboDefaultInput.Click();
+            pageObject.OptionDefaultInput.Click();
 
-                        pageObject.CampoLargeInput.Click();
-                            pageObject.OptionLargeInput.Click();
+            pageObject.CampoLargeInput.Click();
+            pageObject.OptionLargeInput.Click();
 
             Assert.AreEqual(dados.Email, BuscaValorDoElementoParaInputs(driver, pageObject.CampoLargeInput));
 

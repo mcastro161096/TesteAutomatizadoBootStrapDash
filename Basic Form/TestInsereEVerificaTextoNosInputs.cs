@@ -1,7 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using System;
-using System.Collections;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -16,23 +13,23 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Form
             AbreUrl("https://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/basicFormElements/");
             BasicFormElementsPgo pageObject = new BasicFormElementsPgo(driver);
 
-                Esperas espera = new Esperas(driver);
-                    espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
+            Esperas espera = new Esperas(driver);
+            espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
-                 DadosParaInputs dados = new DadosParaInputs();
+            DadosParaInputs dados = new DadosParaInputs();
 
 
-                    pageObject.CampoName.SendKeys(dados.Name);
+            pageObject.CampoName.SendKeys(dados.Name);
 
-                    pageObject.CampoEmail.SendKeys(dados.Email);
+            pageObject.CampoEmail.SendKeys(dados.Email);
 
-                    pageObject.CampoPassword.SendKeys(dados.Password);
+            pageObject.CampoPassword.SendKeys(dados.Password);
 
-                    pageObject.CampoUpload.SendKeys(dados.Arquivo);
+            pageObject.CampoUpload.SendKeys(dados.Arquivo);
 
-                    pageObject.CampoCity.SendKeys(dados.City);
+            pageObject.CampoCity.SendKeys(dados.City);
 
-                    pageObject.CampoMessage.SendKeys(dados.Message);
+            pageObject.CampoMessage.SendKeys(dados.Message);
 
 
             Assert.AreEqual(dados.Name, BuscaValorDoElementoParaInputs(driver, pageObject.CampoName));

@@ -15,16 +15,16 @@ namespace TesteAutomatizadoBootStrapDash.Default_Form
             AbreUrl("https://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/basicFormElements/");
             DefaultFormElementsPgo pageObject = new DefaultFormElementsPgo(driver);
 
-                Esperas espera = new Esperas(driver);
-                        espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
+            Esperas espera = new Esperas(driver);
+            espera.EsperaElementoSerClicavel(pageObject.CampoEmail);
 
-                    Assert.AreEqual(true, pageObject.CampoEmail.Enabled);
+            Assert.AreEqual(true, pageObject.CampoEmail.Enabled);
 
-                    Assert.AreEqual(true, pageObject.CampoPassword.Enabled);
+            Assert.AreEqual(true, pageObject.CampoPassword.Enabled);
 
-                    Assert.AreEqual(true, pageObject.BotaoSubmit.Enabled);
+            Assert.AreEqual(true, pageObject.BotaoSubmit.Enabled);
 
-                    Assert.AreEqual(true, pageObject.BotaoCancel.Enabled);
+            Assert.AreEqual(true, pageObject.BotaoCancel.Enabled);
 
 
 

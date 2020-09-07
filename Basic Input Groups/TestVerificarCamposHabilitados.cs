@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -14,8 +13,8 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Input_Groups
             AbreUrl("https://www.bootstrapdash.com/demo/star-admin-pro-vue/demo_1/#/basicFormElements/");
             BasicInputGroupsElementsPgo pageObject = new BasicInputGroupsElementsPgo(driver);
 
-                Esperas espera = new Esperas(driver);
-                    espera.EsperaElementoSerClicavel(pageObject.Campo1);
+            Esperas espera = new Esperas(driver);
+            espera.EsperaElementoSerClicavel(pageObject.Campo1);
 
             Assert.AreEqual(true, pageObject.Campo1.Enabled);
 

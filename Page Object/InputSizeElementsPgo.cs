@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TesteAutomatizadoBootStrapDash.Page_Object
 {
@@ -30,33 +25,33 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
         {
 
 
-            
+
             TituloCard = driver.FindElement(By.CssSelector("div.col-md-7.grid-margin.stretch-card > div > div:nth-child(1) > h4"));
-            
+
             DescricaoCard = driver.FindElement(By.CssSelector("div.col-md-7.grid-margin.stretch-card > div > div:nth-child(1) > p"));
-            
+
             LabelLargeInput = driver.FindElement(By.Id("__BVID__141__BV_label_"));
-            
+
             CampoLargeInput = driver.FindElement(By.CssSelector("#__BVID__141  input"));
-            
+
             LabelDefaultInput = driver.FindElement(By.Id("__BVID__143__BV_label_"));
-            
+
             CampoDefaultInput = driver.FindElement(By.CssSelector("#__BVID__143 input"));
-            
+
             LabelSmallInput = driver.FindElement(By.Id("__BVID__145__BV_label_"));
-            
+
             CampoSmallInput = driver.FindElement(By.CssSelector("#__BVID__145 input"));
-            
+
             SubTituloCard = driver.FindElement(By.CssSelector("div:nth-child(2) > h4"));
-            
+
             ComboSmallInput = driver.FindElement(By.Id("__BVID__148"));
 
             OptionSmallInput = driver.FindElement(By.CssSelector("#__BVID__148 option[value='a']"));
-            
+
             ComboDefaultInput = driver.FindElement(By.Id("__BVID__150"));
 
             OptionDefaultInput = driver.FindElement(By.CssSelector("#__BVID__150 option[value='b']"));
-            
+
             ComboLargeInput = driver.FindElement(By.Id("__BVID__152"));
 
             OptionLargeInput = driver.FindElement(By.CssSelector("#__BVID__152 option[value='[object Object]']"));
@@ -65,9 +60,9 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
         }
     }
 
-        
-        
 
 
-    
+
+
+
 }

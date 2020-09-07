@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using TesteAutomatizadoBootStrapDash.Page_Object;
 using TesteAutomatizadoBootStrapDash.Utils;
 
@@ -15,15 +14,15 @@ namespace TesteAutomatizadoBootStrapDash.Basic_Input_Groups
             BasicInputGroupsElementsPgo pageObject = new BasicInputGroupsElementsPgo(driver);
 
             Esperas espera = new Esperas(driver);
-                espera.EsperaElementoSerClicavel(pageObject.Campo1);
+            espera.EsperaElementoSerClicavel(pageObject.Campo1);
 
-                    DadosParaInputs dados = new DadosParaInputs();
+            DadosParaInputs dados = new DadosParaInputs();
 
-                    pageObject.Campo1.SendKeys(dados.UserName);
+            pageObject.Campo1.SendKeys(dados.UserName);
 
-                    pageObject.Campo2.SendKeys(dados.UserName);
+            pageObject.Campo2.SendKeys(dados.UserName);
 
-                    pageObject.Campo3.SendKeys(dados.Valor.ToString());
+            pageObject.Campo3.SendKeys(dados.Valor.ToString());
 
 
             Assert.AreEqual(dados.UserName, BuscaValorDoElementoParaInputs(driver, pageObject.Campo1));

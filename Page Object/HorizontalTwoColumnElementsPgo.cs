@@ -1,15 +1,10 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TesteAutomatizadoBootStrapDash.Page_Object
 {
     public class HorizontalTwoColumnElementsPgo
     {
-       
+
 
         public IWebElement CampoFirstName { get; set; }
 
@@ -28,7 +23,7 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
         public IWebElement CampoDateOfBirth { get; set; }
 
         public IWebElement RadioMembership { get; set; }
-    
+
         public IWebElement LabelMembership { get; set; }
 
         public IWebElement CampoState { get; set; }
@@ -43,7 +38,7 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
 
         public IWebElement OptionCountry { get; set; }
 
-       
+
 
 
         public HorizontalTwoColumnElementsPgo(IWebDriver driver)
@@ -65,7 +60,7 @@ namespace TesteAutomatizadoBootStrapDash.Page_Object
             CampoDateOfBirth = driver.FindElement(By.Id("__BVID__160"));
 
             RadioMembership = driver.FindElement(By.CssSelector("#radios2 > div:nth-child(2) > input"));
-           
+
             LabelMembership = driver.FindElement(By.CssSelector("[for='__BVID__166']"));
 
             CampoState = driver.FindElement(By.Id("input16"));
